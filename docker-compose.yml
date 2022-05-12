@@ -66,7 +66,7 @@ services:
     ports:
       - "21:21"
       - "30000:30009"
-    volumes:
+    volumes: 
       - "./${FTP_LOCAL_HOME}:/var/www/html"
       - "./passwd:/etc/pure-ftpd/passwd"
     environment:
