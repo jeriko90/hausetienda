@@ -43,8 +43,8 @@ services:
     depends_on:
       - wordpress
     ports:
-      - "8080:80"
-      - "8443:443"
+      - "${NGINX_PUERTO_80}:80"
+      - "${NGINX_PUERTO_443}:443"
     volumes:
       - "./${NGINX_LOCAL_HOME}:/var/www/html"
       - ${NGINX_CONF}:/etc/nginx/conf.d/default.conf
@@ -65,15 +65,15 @@ services:
     container_name: ${FTP_CT_NAME}
     ports:
       - "21:21"
-      - "30000:30000"
+      - "30000:30009"
     volumes:
       - "./${FTP_LOCAL_HOME}:/var/www/html"
       - "./passwd:/etc/pure-ftpd/passwd"
     environment:
-      PUBLICHOST: "172.18.0.2"
-      FTP_USER_NAME: hausetienda
-      FTP_USER_PASS: hausepass
-      FTP_USER_HOME: /var/www/html
+      PUBLICHOST: "${FTP_HOST_IP}"
+      FTP_USER_NAME: "hausetienda"
+      FTP_USER_PASS: "hausetienda"
+      FTP_USER_HOME: "/var/www/html"
     restart: always
 
 networks:
