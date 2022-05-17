@@ -75,7 +75,7 @@ services:
       - "./${FTP_LOCAL_HOME}:/var/www/html"
       - "./passwd:/etc/pure-ftpd/passwd"
     environment:
-      PUBLICHOST: "${FTP_IP}"
+      PUBLICHOST: "${FTP_HOST}"
       FTP_USER_NAME: "hausetienda"
       FTP_USER_PASS: "hausetienda"
       FTP_USER_HOME: "/var/www/html/"
