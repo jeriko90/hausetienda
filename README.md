@@ -7,11 +7,12 @@ Solo debes ejecutar : docker-compose up -d
 
 Ésto ejecuta los contenedores :
 
-- WORDPRESS_CT_NAME
-- ADMINER_CT_NAME
-- MYSQL_CT_NAME
-- NGINX_CT_NAME
-- FTP_CT_NAME
+- WORDPRESS
+- ADMINE
+- MYSQL
+- NGINX
+- FTP
+- MAILHOG
 
 En el archivo .env podes encontrar todas las variables de entornos . 
 
