@@ -60,3 +60,6 @@ Configuracion:
 Volumenes:
 - ./mysql (Volumen Mysql)
 - ./html (Volumen Wordpress)
+
+Descargar archivo de Wpress (Backup de la tienda)
+- https://www.mediafire.com/file/aqprwmsysgykkjv/cliente1.hausetienda.tk-20220516-230205-m9jxdq.wpress/file
